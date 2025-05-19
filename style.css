@@ -18,6 +18,3 @@ body {
 .navbar a:hover {
   color: #8184e4;
 }
-html {
-  scroll-behavior: smooth; 
-}
