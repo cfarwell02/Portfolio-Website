@@ -70,25 +70,26 @@
 
     <section class="container my-5" id="Resume">
       <h2>My Resume</h2>
-      <p>Here is a link to my resume...</p>
       <a
         class="btn btn-primary"
         href="https://docs.google.com/document/d/1I1X2CT0vao3AQnc8ILgM0W_pJMYRNrBB1G9FWad0oJ8/view?usp=sharing"
         target="_blank"
-        rel="noopener noreferrer">
-        <i class="bi bi-cloud-download-fill me-2"></i> View My Resume</a>
+        rel="noopener noreferrer"
+      >
+        <i class="bi bi-cloud-download-fill me-2"></i> View My Resume</a
+      >
     </section>
 
     <section class="container my-5" id="skills">
       <h2>My Skills</h2>
-      <ul>
-        <li>Java</li>
-        <li>C++</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Swift</li>
-        <li>JavaScript</li>
-      </ul>
+      <div class="row text-center">
+        <div class="col">Java</div>
+        <div class="col">C++</div>
+        <div class="col">HTML</div>
+        <div class="col">CSS</div>
+        <div class="col">Swift</div>
+        <div class="col">JavaScript</div>
+      </div>
     </section>
 
     <section class="container my-5" id="projects">
@@ -151,13 +152,34 @@
       </p>
     </section>
 
-    <footer>
-      <p>&copy; 2026 My First Portfolio Website</p>
+    <footer class = "bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p>Connect with me:</p>
+        <a href="https://github.com/cfarwell02" class="text-white me-3">
+          <i class="bi bi-github" style="font-size: 1.5rem"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/connor-farwell-650ab6264"
+          class="text-white me-3"
+        >
+          <i class="bi bi-linkedin" style="font-size: 1.5rem"></i>
+        </a>
+        <p class="mt-2 mb-0">&copy; 2026 Connor Farwell</p>
+      </div>
     </footer>
     <style>
       .card-img-top {
         height: 300px;
         object-fit: cover;
+      }
+      @media (max-width: 786px) {
+        .card-img-top {
+          height: 200px;
+        }
+      }
+      .card:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
       }
     </style>
     <script>
