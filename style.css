@@ -51,3 +51,8 @@ footer .bi {
   line-height: 1;
   display: inline-block;
 }
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
