@@ -38,7 +38,7 @@ html {
 }
 @media (max-width: 786px) {
   .card-img-top {
-    height: 200px;
+    height: 400px;
   }
 }
 .card:hover {
