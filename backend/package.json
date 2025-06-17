@@ -1,0 +1,27 @@
+{
+  "name": "cfarwell02.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio Website \r Personal Portfolio Website containing personal projects, resume, contacts and an about me section.",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfarwell02/cfarwell02.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cfarwell02/cfarwell02.github.io/issues"
+  },
+  "homepage": "https://github.com/cfarwell02/cfarwell02.github.io#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.3"
+  }
+}
