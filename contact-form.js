@@ -1,7 +1,8 @@
 const supabaseUrl = "https://pnuyswkasffbbcquntvq.supabase.co";
 const supabaseKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudXlzd2thc2ZmYmJjcXVudHZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAxNDM2MjAsImV4cCI6MjA2NTcxOTYyMH0.OWhlKHdnuF2AkLszwoUvkrradExz91t55UnyI8UatSs";
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
@@ -26,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       console.error(error);
     } else {
-      alert("Thank you for reaching out! I'll get back to you soon.");
       form.reset();
       window.location.href = "thanks.html"; // Redirect to thank you page
     }
