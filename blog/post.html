@@ -2,16 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Blog Post</title>
+    <title>Blog Post | Connor Farwell Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../style.css" />
   </head>
-  <body>
-    <a href="index.html">&larr; Back to Blog</a>
-    <div id="post"></div>
+  <body class="bg-light">
+    <!-- Navbar/Header -->
+    <nav class="navbar navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">&larr; Back to Blog</a>
+        <span class="navbar-text text-white">Blog Post</span>
+      </div>
+    </nav>
+    <div class="container py-4">
+      <div id="loading" class="text-center my-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <div id="post-container" class="row justify-content-center">
+        <!-- Post content will go here -->
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/umd/supabase.min.js"></script>
+    <!-- Post logic -->
     <script src="post.js"></script>
   </body>
 </html>
