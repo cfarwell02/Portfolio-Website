@@ -9,7 +9,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Tooltip activation
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
 tooltipTriggerList.forEach((t) => new bootstrap.Tooltip(t));
 
 // AOS animation
@@ -28,4 +30,20 @@ gsap.from(".lead", {
   opacity: 0,
   duration: 1,
   ease: "power2.out",
+});
+
+const slideoutBtn = document.getElementById("slideout-btn");
+const slideoutMenu = document.getElementById("slideout-menu");
+
+slideoutBtn.addEventListener("click", (e) => {
+  slideoutMenu.classList.toggle("slideout-open");
+  slideoutMenu.classList.toggle("slideout-closed");
+  e.stopPropagation();
+});
+
+document.addEventListener("click", (e) => {
+  if (!slideoutMenu.contains(e.target) && !slideoutBtn.contains(e.target)) {
+    slideoutMenu.classList.add("slideout-closed");
+    slideoutMenu.classList.remove("slideout-open");
+  }
 });

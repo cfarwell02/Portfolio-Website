@@ -19,13 +19,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="text-center bg-dark text-white py-4">
+    <header class="text-center bg-dark text-white py-4 position-relative">
       <img
         src="images/Profile-Picture.jpg"
         alt="Connor Farwell"
         width="120"
         height="120"
-        class="rounded-circle border border-3 mb-3"
+        class="rounded-circle border border-3 mb-3 shadow-sm"
         style="
           object-fit: cover;
           object-position: 50% 75%;
@@ -33,44 +33,26 @@
         "
       />
       <h1 class="display-4 fw-bold" id="hero-name">Connor Farwell</h1>
-      <p class="lead">
+      <p class="lead mb-4">
         Aspiring Software Engineer | Mobile App & Web Developer
       </p>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center" href="#"> </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
 
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Resume">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Me</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <!-- Hamburger and Slideout Menu directly underneath header info -->
+      <div id="slideout-nav-container" style="margin-top: 12px">
+        <button id="slideout-btn" aria-label="Open navigation">
+          <span class="slideout-bar"></span>
+          <span class="slideout-bar"></span>
+          <span class="slideout-bar"></span>
+        </button>
+        <nav id="slideout-menu" class="slideout-closed">
+          <a href="#about">About Me</a>
+          <a href="#Resume">Resume</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact Me</a>
+        </nav>
+      </div>
     </header>
-
     <section
       class="container bg-light text-center py-5"
       id="about"

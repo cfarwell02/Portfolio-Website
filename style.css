@@ -1,21 +1,5 @@
-
-.navbar {
-  background-color: #333;
-  padding: 1rem;
-  text-align: center;
-}
-.navbar a {
-  color: #f5f5f5;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-.navbar a:hover {
-  color: #8184e4;
-}
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 @keyframes fadeInSlide {
   0% {
@@ -51,8 +35,97 @@ footer .bi {
   line-height: 1;
   display: inline-block;
 }
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.7;
   color: #333;
+}
+
+#slideout-nav-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 32px;
+  margin-left: 16px;
+  z-index: 1200;
+}
+
+#slideout-btn {
+  background: #23262a; /* Match your header background */
+  border: none;
+  border-radius: 10px;
+  width: 56px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* Remove shadow to blend in */
+  box-shadow: none;
+  z-index: 1100;
+  transition: background 0.2s;
+  opacity: 0.98;
+}
+#slideout-btn .slideout-bar {
+  color: #23262a;
+  width: 32px;
+  height: 4px;
+  background: #fff;
+}
+
+#slideout-menu {
+  position: absolute;
+  left: 72px; /* sits to the right of the button */
+  top: 0;
+  color: #fff;
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 1;
+
+  transform-origin: left center;
+  transition: transform 0.23s cubic-bezier(0.7, 1.7, 0.5, 1), opacity 0.23s;
+  pointer-events: none;
+  z-index: 1300;
+}
+
+#slideout-menu.slideout-open {
+  transform: scaleX(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+#slideout-menu.slideout-closed {
+  transform: scaleX(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#slideout-menu a {
+  color: #fff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 0;
+  font-size: 1em; /* Make font a bit smaller (try 0.95em if still too big) */
+  box-shadow: none;
+  text-align: center; /* Center text under the link */
+  margin: 0 2px;
+}
+#slideout-menu a:hover {
+  color: #00bfff;
+}
+
+@media (max-width: 600px) {
+  #slideout-menu a {
+    font-size: 0.93em;
+  }
+  #hero-name {
+    font-size: 1.5rem;
+  }
 }
