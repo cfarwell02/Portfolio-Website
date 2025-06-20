@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="A personal portfolio website built and designed by Connor Farwell to showcase software projects and development skills."
+      content="Connor Farwell's personal portfolio website showcasing software projects, blog posts, and web development skills with modern design and Supabase integration."
     />
     <meta name="author" content="Connor Farwell" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,142 +31,141 @@
       </nav>
       <h1 style="text-align: center">Portfolio Website</h1>
     </header>
-    <section id="description">
-      <div class="container my-5">
-        <h2 class="text-center mb-4">Project Description</h2>
-        <p class="lead fw-light mb-4">
-          This is my personal portfolio website, built from scratch to highlight
-          my software engineering projects, technical skills, and experience. It
-          features a clean, modern design and responsive layout for seamless
-          browsing across devices.
-        </p>
-      </div>
+
+    <section id="description" class="container my-5">
+      <h2 class="text-center mb-4">Project Description</h2>
+      <p class="lead fw-light mb-4">
+        This is my personal portfolio website, built from the ground up to
+        highlight my software development projects, blog posts, and
+        capabilities. It showcases clean design, responsive layout, animations,
+        and real-time data integration via Supabase—all without a custom server.
+      </p>
     </section>
 
     <section id="problem" class="container my-5">
-      <div>
-        <h2 class="text-center mb-4">Why I Built This</h2>
-        <p>
-          As a developer, I needed a dedicated space to share my work, story,
-          and skill set with potential employers and collaborators. Building my
-          own site also gave me hands-on experience with front-end web
-          technologies and best practices for accessibility, SEO, and user
-          experience.
-        </p>
-      </div>
-    </section>
-
-    <section id="website-preview" class="container my-5">
-      <h2 class="text-center mb-4">Website Preview</h2>
-      <div class="row">
-        <div class="img-fluid rounded shadow-sm mb-3 col-md-6 text-center">
-          <img
-            src="images/website-home.png"
-            alt="Homepage preview"
-            style="max-width: 90%; border-radius: 1rem"
-          />
-        </div>
-        <div class="img-fluid rounded shadow-sm mb-3 col-md-6 text-center">
-          <img
-            src="images/website-projects.png"
-            alt="Projects page preview"
-            style="max-width: 90%; border-radius: 1rem"
-          />
-        </div>
-      </div>
+      <h2 class="text-center mb-4">Why I Built This</h2>
+      <p>
+        I wanted to create a dedicated online space where I could display my
+        skills, apps, and engineering journey. Beyond just a resume, this
+        website serves as a living project—where I can experiment with front-end
+        tools, improve my design sensibility, and build real functionality like
+        live blog data and contact form handling.
+      </p>
     </section>
 
     <section id="features" class="container my-5">
-      <div>
-        <h2 class="text-center mb-4">Features</h2>
-        <ul class="list-unstyled">
-          <li>
-            <i class="bi bi-check-circle-fill text-success me-2"></i>Modern,
-            mobile-responsive design
-          </li>
-          <li>
-            <i class="bi bi-grid-1x2-fill me-2"></i>Project gallery with
-            detailed pages
-          </li>
-          <li>
-            <i class="bi bi-envelope-fill me-2"></i>Contact form (with backend
-            integration)
-          </li>
-          <li>
-            <i class="bi bi-link-45deg me-2"></i>Links to GitHub and live
-            projects
-          </li>
-          <li>
-            <i class="bi bi-person-badge-fill me-2"></i>About and skills
-            sections
-          </li>
-        </ul>
-      </div>
+      <h2 class="text-center mb-4">Key Features</h2>
+      <ul class="list-unstyled">
+        <li>
+          <i class="bi bi-check-circle-fill text-success me-2"></i>Modern,
+          mobile-responsive design with Bootstrap
+        </li>
+        <li>
+          <i class="bi bi-columns-gap me-2"></i>Animated sections using custom
+          CSS and scroll effects
+        </li>
+        <li>
+          <i class="bi bi-journal-text me-2"></i>Dynamically loaded blog posts
+          from Supabase
+        </li>
+        <li>
+          <i class="bi bi-envelope-fill me-2"></i>Contact form submissions saved
+          securely to Supabase (no backend server required)
+        </li>
+        <li>
+          <i class="bi bi-laptop-fill me-2"></i>Project showcase with individual
+          pages and GitHub/live links
+        </li>
+        <li>
+          <i class="bi bi-person-badge me-2"></i>Dedicated "About Me" and skills
+          overview section
+        </li>
+      </ul>
     </section>
 
     <section id="challenges" class="container my-5">
-      <div>
-        <h2 class="text-center mb-4">Challenges Faced & Lessons Learned</h2>
-        <p>
-          My biggest challenge was connecting the contact form to a real backend
-          (using Supabase) for form submissions, while keeping everything
-          secure. I also learned how to design for accessibility and optimize
-          the website for fast loading and smooth user experience.
-        </p>
-      </div>
+      <h2 class="text-center mb-4">Challenges & Lessons Learned</h2>
+      <p>
+        The biggest technical hurdle was implementing real data persistence for
+        my contact form using Supabase without relying on a custom backend. I
+        also tackled responsive design, accessibility, and learned how to work
+        with asynchronous JavaScript to fetch blog posts.
+      </p>
+      <ul>
+        <li>
+          Learned how to use Supabase's JavaScript client to securely store
+          contact form data
+        </li>
+        <li>
+          Improved my understanding of responsive design using Bootstrap’s grid
+          system
+        </li>
+        <li>
+          Debugged CORS issues and learned how to test locally with live APIs
+        </li>
+        <li>
+          Gained experience working with async/await and form validation in
+          Vanilla JS
+        </li>
+      </ul>
+      <p class="mt-3">
+        This site is a reflection of where I am now—and where I’m headed as a
+        developer.
+      </p>
     </section>
 
     <section id="future-plans" class="container my-5">
-      <div>
-        <h2 class="text-center mb-4">Planned Improvements</h2>
-        <ul>
-          <li>Blog section for technical articles</li>
-          <li>Dark mode toggle</li>
-          <li>More interactive project demos</li>
-          <li>Expanded SEO and analytics</li>
-        </ul>
-      </div>
+      <h2 class="text-center mb-4">Planned Improvements</h2>
+      <ul>
+        <li>Dark mode toggle with CSS variables and JavaScript</li>
+        <li>Enhanced blog system with categories and tags</li>
+        <li>Interactive project demos or embedded code previews</li>
+        <li>Performance optimization and lazy loading</li>
+        <li>Basic analytics for visitor tracking and engagement</li>
+      </ul>
     </section>
 
     <section id="technologies" class="container my-5">
-      <div>
-        <h2 class="text-center mb-4">Technologies Used</h2>
-        <ul>
-          <li>HTML5 & CSS3</li>
-          <li>JavaScript (Vanilla)</li>
-          <li>Bootstrap 5</li>
-          <li>Supabase (for backend/contact form)</li>
-          <li>GitHub Pages (hosting)</li>
-        </ul>
-      </div>
+      <h2 class="text-center mb-4">Technologies Used</h2>
+      <ul>
+        <li>HTML5 & CSS3 (custom animations and responsive styling)</li>
+        <li>JavaScript (Vanilla JS for form and data handling)</li>
+        <li>Bootstrap 5 (layout, grid, and components)</li>
+        <li>Supabase (for contact form submission & blog post storage)</li>
+        <li>GitHub Pages (static site hosting)</li>
+        <li>Google Fonts & Bootstrap Icons</li>
+      </ul>
     </section>
 
     <section id="project-link" class="container my-5">
-      <div>
-        <h2 class="text-center mb-4">Project Links</h2>
-        <ul>
-          <li>
-            <a
-              href="https://cfarwell02.github.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Live Website</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.com/cfarwell02/cfarwell02.github.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub Repository</a
-            >
-          </li>
-        </ul>
-      </div>
+      <h2 class="text-center mb-4">Project Links</h2>
+      <ul>
+        <li>
+          <i class="bi bi-box-arrow-up-right me-2"></i>
+          <a
+            href="https://cfarwell02.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Live Website</a
+          >
+        </li>
+        <li>
+          <i class="bi bi-github me-2"></i>
+          <a
+            href="https://github.com/cfarwell02/cfarwell02.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub Repository</a
+          >
+        </li>
+      </ul>
     </section>
 
     <footer class="bg-dark text-white text-center py-4 mt-5">
-      <p>&copy; 2026 Connor Farwell</p>
+      <p>&copy; <span id="year"></span> Connor Farwell</p>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
     </footer>
   </body>
 </html>

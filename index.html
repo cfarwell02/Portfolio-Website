@@ -224,7 +224,7 @@
             title="LinkedIn Profile"
           ></i>
         </a>
-        <p class="mt-2 mb-0">&copy; 2026 Connor Farwell</p>
+        <p>&copy; <span id="year"></span> Connor Farwell</p>
       </div>
     </footer>
 
@@ -242,5 +242,9 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <script src="script.js"></script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
