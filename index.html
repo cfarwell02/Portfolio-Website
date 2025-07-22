@@ -17,6 +17,29 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&family=Fira+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", Arial, sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Poppins", Arial, sans-serif;
+      }
+      code,
+      pre,
+      .code {
+        font-family: "Fira Mono", monospace;
+      }
+    </style>
   </head>
   <body>
     <header class="text-center bg-dark text-white py-4 position-relative">
@@ -33,6 +56,16 @@
         "
       />
       <h1 class="display-4 fw-bold" id="hero-name">Connor Farwell</h1>
+      <div
+        class="d-flex justify-content-center align-items-center gap-3 mb-3 contact-info"
+      >
+        <span class="text-white">
+          <i class="bi bi-envelope-fill"></i> connor.farwell.dev@gmail.com
+        </span>
+        <span class="text-white">
+          <i class="bi bi-telephone-fill"></i> 315-525-7481
+        </span>
+      </div>
       <p class="lead mb-4">
         Aspiring Software Engineer | Mobile App & Web Developer
       </p>
@@ -85,10 +118,12 @@
         <span class="badge bg-primary">Java</span>
         <span class="badge bg-success">C++</span>
         <span class="badge bg-warning text-dark">HTML</span>
-        <span class="badge bg-info text-dark">CSS</span>
-        <span class="badge bg-secondary">Swift</span>
         <span class="badge bg-dark">JavaScript</span>
         <span class="badge bg-danger">GitHub</span>
+        <span class="badge bg-warning text-dark">Firebase</span>
+        <span class="badge bg-info">React Native</span>
+        <span class="badge bg-secondary">VS Code</span>
+        <span class="badge bg-success">Expo</span>
       </div>
     </section>
 
@@ -96,25 +131,34 @@
       <h2>My Projects</h2>
       <div class="container my-5">
         <div class="row g-4">
+          <!-- Zenny Project Card -->
           <div class="col-md-4">
-            <a href="FoneSafe page.html" class="text-decoration-none text-dark">
+            <a href="Zenny page.html" class="text-decoration-none text-dark">
               <div class="card h-100 shadow-sm">
                 <img
-                  src="images/FoneSafe Image.png"
-                  class="card-img-top"
-                  alt="FoneSafe App Icon"
+                  src="images/zenny-icon.png"
+                  class="card-img-top p-4 bg-white"
+                  style="
+                    object-fit: contain;
+                    height: 300px;
+                    width: 300px;
+                    margin: auto;
+                    display: block;
+                  "
+                  alt="Zenny App Icon"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">FoneSafe App</h5>
+                  <h5 class="card-title">Zenny</h5>
                   <p class="card-text">
-                    A kid-safe parent-friendly mobile app built with Kotlin and
-                    Jetpack Compose.
+                    Zenny is a smart, friendly money-tracking app built with
+                    React Native and Firebase that makes personal finance simple
+                    and fun with receipt scanning, smart budgets, and AI-powered
+                    insights.
                   </p>
                 </div>
               </div>
             </a>
           </div>
-
           <div class="col-md-4">
             <a
               href="Portfolio Website page.html"
@@ -149,7 +193,7 @@
                   <h5 class="card-title">Blog</h5>
                   <p class="card-text">
                     Personal and technical posts. Built with HTML, Bootstrap,
-                    Supabase.
+                    Firebase.
                   </p>
                 </div>
               </div>
@@ -157,46 +201,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="container my-5" id="contact">
-      <h2>Contact Me</h2>
-      <i class="bi bi-envelope-fill"></i> farwell.connor@gmail.com
-      <p><i class="bi bi-telephone-fill"></i> 315-525-7481</p>
-      <form id="contact-form">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <input
-              type="text"
-              name="name"
-              class="form-control"
-              placeholder="Your name"
-              required
-            />
-          </div>
-          <div class="col-md-6">
-            <input
-              type="email"
-              name="email"
-              class="form-control"
-              placeholder="Your email"
-              required
-            />
-          </div>
-          <div class="col-12">
-            <textarea
-              name="message"
-              rows="5"
-              class="form-control"
-              placeholder="Your Message"
-              required
-            ></textarea>
-          </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary">Send</button>
-          </div>
-        </div>
-      </form>
     </section>
 
     <footer class="bg-dark text-white text-center py-4 mt-5">
@@ -218,6 +222,7 @@
           href="https://www.linkedin.com/in/connor-farwell-650ab6264"
           class="text-white me-3"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i
             class="bi bi-linkedin"

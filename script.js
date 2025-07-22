@@ -31,6 +31,13 @@ gsap.from(".lead", {
   duration: 1,
   ease: "power2.out",
 });
+gsap.from(".contact-info", {
+  delay: 0.25,
+  y: 30,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+});
 
 const slideoutBtn = document.getElementById("slideout-btn");
 const slideoutMenu = document.getElementById("slideout-menu");
