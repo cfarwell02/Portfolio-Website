@@ -247,5 +247,25 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCG77wj6biYopvg9ilwToF0D2s9uJOEax0",
+        authDomain: "portfolio-website-20752.firebaseapp.com",
+        projectId: "portfolio-website-20752",
+        storageBucket: "portfolio-website-20752.firebasestorage.app",
+        messagingSenderId: "131353188006",
+        appId: "1:131353188006:web:612d0b8c9801c9b4978667",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>
