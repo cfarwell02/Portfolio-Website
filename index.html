@@ -22,115 +22,259 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&family=Fira+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: "Inter", Arial, sans-serif;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Poppins", Arial, sans-serif;
-      }
-      code,
-      pre,
-      .code {
-        font-family: "Fira Mono", monospace;
-      }
-    </style>
   </head>
   <body>
-    <header class="text-center bg-dark text-white py-4 position-relative">
-      <img
-        src="images/Profile-Picture.jpg"
-        alt="Connor Farwell"
-        width="120"
-        height="120"
-        class="rounded-circle border border-3 mb-3 shadow-sm"
-        style="
-          object-fit: cover;
-          object-position: 50% 75%;
-          transform: rotate(357deg);
-        "
-      />
-      <h1 class="display-4 fw-bold" id="hero-name">Connor Farwell</h1>
-      <div
-        class="d-flex justify-content-center align-items-center gap-3 mb-3 contact-info"
-      >
-        <span class="text-white">
-          <i class="bi bi-envelope-fill"></i> connor.farwell.dev@gmail.com
-        </span>
-        <span class="text-white">
-          <i class="bi bi-telephone-fill"></i> 315-525-7481
-        </span>
+    <header
+      class="hero text-white position-relative d-flex align-items-center"
+      id="top"
+    >
+      <div class="container py-4 py-md-4">
+        <div class="row align-items-center gy-4 text-center text-md-start">
+          <div class="col-md-7 col-lg-6 col-xl-5 order-2 order-md-1">
+            <p class="hero-kicker mb-2">Engineering Science Student</p>
+            <h1 class="display-4 fw-bold mb-3" id="hero-name">
+              Connor Farwell
+            </h1>
+            <p class="hero-subtitle mb-4">
+              I’m currently earning an Associate in Engineering Science and plan
+              to transfer into a Software Engineering program, building
+              practical web and mobile apps along the way.
+            </p>
+            <p class="hero-contact text-white-50 mb-0">
+              <i class="bi bi-envelope-fill me-2"></i>
+              <a
+                href="mailto:connor.farwell.dev@gmail.com"
+                class="text-white-50 text-decoration-none"
+                >connor.farwell.dev@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="col-md-5 col-lg-4 col-xl-3 text-md-end text-center order-1 order-md-2 mb-3 mb-md-0 ms-auto">
+            <div class="hero-photo-wrapper mx-auto mx-md-0">
+              <img
+                src="images/Profile-Picture.jpg"
+                alt="Connor Farwell"
+                class="hero-photo"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-center align-items-center mt-3 hero-nav"
+        >
+          <nav id="top-nav">
+            <div id="nav-links">
+              <a href="#about">About</a>
+              <a href="#experience">Experience</a>
+              <a href="#projects">Projects</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </nav>
+        </div>
       </div>
-      <p class="lead mb-4">
-        Aspiring Software Engineer | Mobile App & Web Developer
-      </p>
-
-      <!-- Hamburger and Slideout Menu directly underneath header info -->
-      <nav id="top-nav">
-        <nav id="nav-links">
-          <a href="#about">About Me</a>
-          <a href="#Resume">Resume</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact Me</a>
-        </nav>
-      </nav>
     </header>
 
-    <section class="container text-center py-5" id="about" data-aos="fade-up">
-      <div>
-        <h2 class="mb-4">About Me</h2>
-        <p class="lead">
-          Motivated and detail oriented software engineering student with hands
-          on experience building apps and websites using a multitude of
-          technologies. Seeking internship or junior developer opportunities
-          where I can grow my skills and contribute to impactful projects.
-          Proficient in Java, C++, HTML, and JavaScript. Strong problem solving
-          skills and a passion for learning new technologies.
-        </p>
-      </div>
-    </section>
-
-    <section class="container my-5" id="Resume">
-      <h2>My Resume</h2>
-      <a
-        class="btn btn-primary"
-        href="Resources/Connor Farwell - Resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
+    <main>
+      <section
+        class="section container py-5"
+        id="about"
+        data-aos="fade-up"
+        data-aos-offset="150"
       >
-        <i class="bi bi-cloud-download-fill me-2"></i> View My Resume</a
-      >
-    </section>
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <p class="section-eyebrow">About</p>
+            <h2 class="section-title mb-3">A bit about me</h2>
+            <p class="lead">
+              I’m working toward an Associate in Engineering Science and will be
+              transferring into a Software Engineering program after I graduate.
+              Along the way I’ve been building apps and websites to apply what
+              I’m learning and sharpen my problem‑solving skills.
+            </p>
+            <p class="mb-0">
+              So far I’ve completed introductory programming (C++), advanced
+              programming (Java), and data structures (Java). Outside the
+              classroom I focus on personal projects—especially React Native and
+              modern web stacks—to keep growing toward internship and junior dev
+              roles.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <section class="container my-5" id="skills">
-      <h2>My Skills</h2>
-      <div class="d-flex flex-wrap justify-content-center gap-2">
-        <span class="badge bg-primary">Java</span>
-        <span class="badge bg-success">C++</span>
-        <span class="badge bg-warning text-dark">HTML</span>
-        <span class="badge bg-dark">JavaScript</span>
-        <span class="badge bg-danger">GitHub</span>
-        <span class="badge bg-warning text-dark">Firebase</span>
-        <span class="badge bg-info">React Native</span>
-        <span class="badge bg-secondary">VS Code</span>
-        <span class="badge bg-success">Expo</span>
-      </div>
-    </section>
+      <section class="section container py-5" id="Resume">
+        <div class="row justify-content-between align-items-center gy-3">
+          <div class="col-md-7">
+            <p class="section-eyebrow">Resume</p>
+            <h2 class="section-title mb-3">Experience & education</h2>
+            <p class="mb-0 section-body">
+              Download my resume for a concise overview of my Engineering
+              Science coursework, transfer plan into Software Engineering, and
+              recent project work.
+            </p>
+          </div>
+          <div class="col-md-auto">
+            <a
+              class="btn btn-outline-light btn-lg"
+              href="Resources/Connor Farwell - Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-cloud-download-fill me-2"></i> View Resume
+            </a>
+          </div>
+      </section>
 
-    <section class="container my-5" id="projects">
-      <h2>My Projects</h2>
-      <div class="container my-5">
+      <section class="section container py-5" id="skills">
+        <p class="section-eyebrow">Skills</p>
+        <h2 class="section-title mb-4">Technologies I work with</h2>
         <div class="row g-4">
-          <!-- Zenny Project Card -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h3 class="h5 mb-3">Languages</h3>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="skill-chip">Java</span>
+                  <span class="skill-chip">C++</span>
+                  <span class="skill-chip">JavaScript</span>
+                  <span class="skill-chip">HTML</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h3 class="h5 mb-3">Frameworks & libraries</h3>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="skill-chip">React Native</span>
+                  <span class="skill-chip">Expo</span>
+                  <span class="skill-chip">Bootstrap</span>
+                  <span class="skill-chip">Firebase</span>
+                  <span class="skill-chip">Next.js</span>
+                  <span class="skill-chip">Cheerio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h3 class="h5 mb-3">Tools</h3>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="skill-chip">GitHub</span>
+                  <span class="skill-chip">VS Code</span>
+                  <span class="skill-chip">Supabase</span>
+                  <span class="skill-chip">Puppeteer</span>
+                  <span class="skill-chip">OpenRouter AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container py-5" id="experience">
+        <p class="section-eyebrow">Experience</p>
+        <h2 class="section-title mb-4">What I’ve been working on</h2>
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="card shadow-sm border-0 experience-card">
+              <div class="card-body">
+                <p class="experience-period mb-1">2024 – Present</p>
+                <h3 class="h5 mb-1">Personal & academic projects</h3>
+                <p class="experience-location mb-3">Remote / Syracuse, NY</p>
+                <ul class="experience-list mb-0">
+                  <li>
+                    Built <strong>Zenny</strong>, a personal finance mobile app
+                    with React Native, Expo, and Firebase, including
+                    authentication, receipt capture, and budget tracking.
+                  </li>
+                  <li>
+                    Designed and deployed this portfolio and a small blog using
+                    HTML, CSS, Bootstrap, and GitHub Pages with a focus on clean
+                    layout and responsiveness.
+                  </li>
+                  <li>
+                    Completed multiple course projects in Java and C++,
+                    practicing object‑oriented design, data structures, and
+                    debugging in VS Code.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card shadow-sm border-0 experience-card">
+              <div class="card-body">
+                <p class="experience-period mb-1">What I’m looking for</p>
+                <h3 class="h5 mb-1">Internship / junior engineer roles</h3>
+                <p class="experience-location mb-3">Open to remote & hybrid</p>
+                <ul class="experience-list mb-0">
+                  <li>
+                    Teams where I can work with experienced engineers and get
+                    regular feedback on code quality and design.
+                  </li>
+                  <li>
+                    Roles that involve shipping real features, writing tests,
+                    and collaborating via GitHub and code reviews.
+                  </li>
+                  <li>
+                    Modern stacks using JavaScript/TypeScript, Java, or mobile
+                    frameworks such as React Native.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container py-5" id="education">
+        <p class="section-eyebrow">Education</p>
+        <h2 class="section-title mb-4">Academic background</h2>
+        <div class="row justify-content-start">
+          <div class="col-lg-7">
+            <div class="card shadow-sm border-0 experience-card">
+              <div class="card-body">
+                <h3 class="h5 mb-1">A.S. Engineering Science (in progress)</h3>
+                <p class="experience-location mb-3">
+                  Completing my associate degree before transferring into a
+                  Software Engineering program.
+                </p>
+                <ul class="experience-list mb-0">
+                  <li>
+                    Coursework so far: Intro to Programming (C++), Advanced
+                    Programming (Java), Data Structures (Java).
+                  </li>
+                  <li>
+                    Core engineering curriculum covering calculus, physics, and
+                    foundational engineering design.
+                  </li>
+                  <li>
+                    Applying classroom learning through personal software
+                    projects and self‑directed study.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container py-5" id="projects">
+        <p class="section-eyebrow">Projects</p>
+        <h2 class="section-title mb-4">Selected work</h2>
+        <p class="mb-4 section-body">
+          A few projects that demonstrate how I approach problem‑solving,
+          implementation details, and shipping something people can actually
+          use.
+        </p>
+        <div class="container px-0">
+          <div class="row g-4">
           <div class="col-md-4">
             <a href="Zenny page.html" class="text-decoration-none text-dark">
-              <div class="card h-100 shadow-sm">
+              <div class="card h-100 shadow-sm project-card">
                 <img
                   src="images/zenny-icon.png"
                   class="card-img-top p-4 bg-white"
@@ -146,10 +290,36 @@
                 <div class="card-body">
                   <h5 class="card-title">Zenny</h5>
                   <p class="card-text">
-                    Zenny is a smart, friendly money-tracking app built with
-                    React Native and Firebase that makes personal finance simple
-                    and fun with receipt scanning, smart budgets, and insightful
-                    reports.
+                    Mobile app for tracking personal spending with receipt
+                    capture, smart budgets, and basic analytics. Built with
+                    React Native, Expo, and Firebase (Auth/Firestore/Storage).
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="Internship Tracker page.html"
+              class="text-decoration-none text-dark"
+            >
+              <div class="card h-100 shadow-sm project-card d-flex flex-column">
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex align-items-center gap-2 mb-2 text-muted">
+                    <i class="bi bi-kanban text-primary"></i>
+                    <span class="small text-uppercase">Tooling</span>
+                  </div>
+                  <h5 class="card-title">Internship Tracker</h5>
+                  <p class="card-subtitle mb-2 text-muted">
+                    Web application &mdash; July 2025 &ndash; Present
+                  </p>
+                  <p class="card-text mb-2 flex-grow-1">
+                    Internship and job application tracker that pulls details
+                    directly from posting URLs and helps organize the entire
+                    application process.
+                  </p>
+                  <p class="project-stack mb-0">
+                    Next.js · Puppeteer · Cheerio · OpenRouter AI
                   </p>
                 </div>
               </div>
@@ -160,7 +330,7 @@
               href="Portfolio Website page.html"
               class="text-decoration-none text-dark"
             >
-              <div class="card h-100 shadow-sm">
+              <div class="card h-100 shadow-sm project-card">
                 <img
                   src="images/Portfolio Website Image.jpg"
                   class="card-img-top"
@@ -169,27 +339,9 @@
                 <div class="card-body">
                   <h5 class="card-title">Portfolio Website</h5>
                   <p class="card-text">
-                    This site! Built with HTML, CSS, and Bootstrap. Fully
-                    responsive and hosted on GitHub Pages.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-4">
-            <a href="blog/index.html" class="text-decoration-none text-dark">
-              <div class="card h-100 shadow-sm">
-                <img
-                  src="images/blog-icon.png"
-                  class="card-img-top"
-                  alt="Blog"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Blog</h5>
-                  <p class="card-text">
-                    Personal and technical posts. Built with HTML, Bootstrap,
-                    Firebase.
+                    Responsive portfolio site for showcasing projects, skills,
+                    and contact information. Built with HTML, CSS, and
+                    Bootstrap, deployed via GitHub Pages.
                   </p>
                 </div>
               </div>
@@ -197,37 +349,67 @@
           </div>
         </div>
       </div>
-    </section>
+      </section>
 
-    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <section class="section container py-5" id="contact">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p class="section-eyebrow">Contact</p>
+            <h2 class="section-title mb-3">Let’s build something</h2>
+            <p class="mb-4 text-muted">
+              I’m always open to new opportunities, internships, and
+              collaborations. The fastest way to reach me is by email, but feel
+              free to connect on LinkedIn as well.
+            </p>
+            <p class="text-white-50 mb-4">
+              Actively seeking internship opportunities starting Summer 2026.
+            </p>
+            <div class="card contact-card border-0">
+              <div class="card-body d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                <div>
+                  <p class="mb-1">
+                    <i class="bi bi-envelope-fill me-2 text-primary"></i>
+                    <a
+                      href="mailto:connor.farwell.dev@gmail.com"
+                      class="text-decoration-none"
+                      >connor.farwell.dev@gmail.com</a
+                    >
+                  </p>
+                  <p class="mb-0">
+                    <i class="bi bi-telephone-fill me-2 text-primary"></i>
+                    315-525-7481
+                  </p>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                  <a
+                    href="https://github.com/cfarwell02"
+                    class="btn btn-outline-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="bi bi-github me-2"></i>GitHub
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/connor-farwell-650ab6264"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="bi bi-linkedin me-2"></i>LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer text-white text-center py-4 mt-5">
       <div class="container">
-        <p>Connect with me:</p>
-        <a
-          href="https://github.com/cfarwell02"
-          class="text-white me-3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i
-            class="bi bi-github"
-            data-bs-toggle="tooltip"
-            title="GitHub Profile"
-            style="font-size: 1.5rem"
-          ></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/connor-farwell-650ab6264"
-          class="text-white me-3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i
-            class="bi bi-linkedin"
-            style="font-size: 1.5rem"
-            title="LinkedIn Profile"
-          ></i>
-        </a>
-        <p>&copy; <span id="year"></span> Connor Farwell</p>
+        <p class="mb-0 text-white-50">
+          &copy; <span id="year"></span> Connor Farwell
+        </p>
       </div>
     </footer>
 

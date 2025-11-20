@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Internship Tracker is a web app for organizing internship and job applications by scraping postings and tracking status in one dashboard."
+    />
+    <meta name="author" content="Connor Farwell" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Tracker | Connor Farwell Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        background: radial-gradient(circle at top left, #0f172a, #030712);
+        color: #e2e8f0;
+      }
+
+      header {
+        background: linear-gradient(135deg, #0b1324, #03050c);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+      }
+
+      h1,
+      h2 {
+        color: #f9fafb;
+      }
+
+      section p {
+        color: #c7d2fe;
+      }
+
+      .list-unstyled li,
+      section ul li {
+        color: #dbeafe;
+        margin-bottom: 0.85rem;
+      }
+
+      #project-link a,
+      #project-link span {
+        color: #93c5fd;
+      }
+
+      footer {
+        background: #030712;
+        border-top: 1px solid rgba(148, 163, 184, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="text-center bg-dark text-white pb-5">
+      <nav class="navbar navbar-dark px-3">
+        <a class="navbar-brand text-white" href="index.html"
+          >&larr; Back to Portfolio</a
+        >
+      </nav>
+      <h1 style="text-align: center">Internship Tracker</h1>
+      <p class="mb-0">
+        Web application &mdash; July 2025 &ndash; Present
+      </p>
+    </header>
+
+    <section id="description" class="container my-5">
+      <h2 class="text-center mb-4">Project Description</h2>
+      <p class="lead fw-light mb-4">
+        Internship Tracker is a web app that helps organize internship and job
+        applications in one place. Instead of manually copying details from each
+        posting, users paste a link and let the app pull out the key
+        information, then track status, notes, and documents for every
+        application.
+      </p>
+    </section>
+
+    <section id="problem" class="container my-5">
+      <h2 class="text-center mb-4">Why I Built This</h2>
+      <p>
+        Keeping track of multiple internships and job applications across
+        different sites quickly gets messy. I wanted a single dashboard where I
+        could store links, role details, deadlines, and my own notes&mdash;and
+        automate as much of the data entry as possible. This project was also a
+        chance to work with scraping tools, headless browsers, and LLMs in a
+        practical way.
+      </p>
+    </section>
+
+    <section id="features" class="container my-5">
+      <h2 class="text-center mb-4">Key Features</h2>
+      <ul class="list-unstyled">
+        <li>
+          <i class="bi bi-link-45deg me-2 text-success"></i>Paste a job or
+          internship posting URL and automatically extract the role title,
+          company, location, and description.
+        </li>
+        <li>
+          <i class="bi bi-table me-2"></i>Dashboard view to track each
+          application with fields for status, notes, and next actions.
+        </li>
+        <li>
+          <i class="bi bi-folder2-open me-2"></i>Attach resumes and cover
+          letters to each application for quick reference.
+        </li>
+        <li>
+          <i class="bi bi-funnel me-2"></i>Filter or sort applications by status
+          (e.g., applied, interviewing, rejected, offer).
+        </li>
+      </ul>
+    </section>
+
+    <section id="implementation" class="container my-5">
+      <h2 class="text-center mb-4">How It Works</h2>
+      <p>
+        When a user submits a job posting URL, the backend launches
+        <strong>Puppeteer</strong> to load the page and capture its HTML. That
+        content is parsed with <strong>Cheerio</strong> to extract structured
+        pieces like title, company, and location where possible. The full
+        content and any partially structured data are then sent to
+        <strong>OpenRouter AI</strong>, which returns a normalized JSON payload
+        containing the main fields the dashboard needs.
+      </p>
+      <p>
+        The frontend is built in <strong>Next.js</strong>, providing a modern
+        React-based experience with server-side or API routes for the scraping
+        and AI calls. Application records, statuses, and file metadata are saved
+        so that users can come back and continue tracking their search over
+        time.
+      </p>
+    </section>
+
+    <section id="technologies" class="container my-5">
+      <h2 class="text-center mb-4">Technologies Used</h2>
+      <ul>
+        <li>Next.js (React framework for the frontend and API routes)</li>
+        <li>Puppeteer (headless Chrome for loading and scraping pages)</li>
+        <li>Cheerio (server-side HTML parsing and extraction)</li>
+        <li>OpenRouter AI (LLM-powered extraction and normalization)</li>
+        <li>JavaScript/TypeScript</li>
+        <li>GitHub (version control and collaboration)</li>
+      </ul>
+    </section>
+
+    <section id="lessons" class="container my-5">
+      <h2 class="text-center mb-4">Challenges & Lessons Learned</h2>
+      <ul>
+        <li>
+          Handling different job board layouts and making the scraper resilient
+          to small HTML changes.
+        </li>
+        <li>
+          Designing prompts and response schemas for the AI so that output is
+          reliable enough to store directly.
+        </li>
+        <li>
+          Coordinating browser automation, parsing, and AI calls without
+          blocking the UI or making users wait too long.
+        </li>
+        <li>
+          Structuring the data model to support status changes, notes, and file
+          attachments in a clean way.
+        </li>
+      </ul>
+    </section>
+
+    <section id="project-link" class="container my-5">
+      <h2 class="text-center mb-4">Project Links</h2>
+      <ul>
+        <!-- Fill these in once you have them -->
+        <li>
+          <i class="bi bi-github me-2"></i>
+          <span>GitHub repository link coming soon</span>
+        </li>
+        <li>
+          <i class="bi bi-box-arrow-up-right me-2"></i>
+          <span>Live demo link coming soon</span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="container my-5">
+      <p class="mt-3">
+        <strong>
+          <em>
+            Internship Tracker is a practical tool for my own job search and a
+            way to deepen my experience with scraping, AI, and modern web app
+            architecture.
+          </em>
+        </strong>
+      </p>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>&copy; <span id="year"></span> Connor Farwell</p>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>
+
+
